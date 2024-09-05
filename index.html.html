@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Profil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        header {
+            background: #00796b;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #004d40 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        #showcase {
+            min-height: 400px;
+            background: url('https://i.im.ge/2024/08/05/fXUuLL.39431175WhatsAppImage2021-05-27at10-49-01-.webp') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        #showcase h1 {
+            font-size: 55px;
+            margin-top: 0;
+        }
+        #showcase p {
+            font-size: 20px;
+        }
+        .bio, .about {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .bio img {
+            float: left;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+        .bio h2, .about h2 {
+            margin-top: 0;
+        }
+        .social-media {
+            margin-top: 20px;
+        }
+        .social-media a {
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .social-media img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        .glitch {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        .glitch:before,
+        .glitch:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            mix-blend-mode: difference;
+            animation: glitch 2s infinite;
+        }
+        .glitch:after {
+            animation: glitch 2s infinite reverse;
+        }
+        @keyframes glitch {
+            0% {
+                clip: rect(24px, 9999px, 23px, 0);
+                transform: skew(0.03deg);
+            }
+            10% {
+                clip: rect(56px, 9999px, 47px, 0);
+                transform: skew(0.05deg);
+            }
+            20% {
+                clip: rect(78px, 9999px, 68px, 0);
+                transform: skew(0.08deg);
+            }
+            30% {
+                clip: rect(20px, 9999px, 10px, 0);
+                transform: skew(0.01deg);
+            }
+            40% {
+                clip: rect(45px, 9999px, 35px, 0);
+                transform: skew(0.04deg);
+            }
+            50% {
+                clip: rect(70px, 9999px, 60px, 0);
+                transform: skew(0.07deg);
+            }
+            60% {
+                clip: rect(23px, 9999px, 13px, 0);
+                transform: skew(0.02deg);
+            }
+            70% {
+                clip: rect(38px, 9999px, 28px, 0);
+                transform: skew(0.06deg);
+            }
+            80% {
+                clip: rect(65px, 9999px, 55px, 0);
+                transform: skew(0.09deg);
+            }
+            90% {
+                clip: rect(19px, 9999px, 9px, 0);
+                transform: skew(0.02deg);
+            }
+            100% {
+                clip: rect(52px, 9999px, 42px, 0);
+                transform: skew(0.05deg);
+            }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 0x solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        footer {
+            background-color: #00796b;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px; 
+        }
+    </style>
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</head>
+<body onload="showPage('home')">
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Biodata Profil</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('about')">Tentang Saya</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="glitch"></div>
+        <div class="container">
+            <h1>Selamat Datang di Halaman Profil Saya</h1>
+            <p>Temukan informasi lebih lanjut tentang saya di sini</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div id="home" class="page active">
+            <div class="bio">
+                <img src="https://i.im.ge/2024/08/05/fXLqgq.IMG-20240805-WA0005.th.jpeg" alt="IMG 20240805 WA0005" border="0" />
+                <div class="bio-content">
+                    <h2>MUHAMMAD ARIF</h2>
+                    <table>
+                        <tr>
+                            <td>Tanggal Lahir</td>
+                            <td>:</td>
+                            <td>19 Desember 2007</td>
+                        </tr>
+                        <tr>
+                            <td>Alamat</td>
+                            <td>:</td>
+                            <td>Jalan Wonodadi 2</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td>wonodadii88@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Telepon</td>
+							<td>:</td>
+                            <td>+62 858 4900 4978</td>
+                        </tr>
+                        <tr>
+                            <td>Deskripsi Singkat</td>
+                            <td>:</td>
+                            <td>Saya adalah seorang siswa yang sekolah di SMKN 1 RASAU JAYA</td>
+                        </tr>
+                    </table>
+                    <div class="social-media">
+                        <h3>Ikuti Saya di:</h3>
+                        <a href="https://facebook.com/rrqarif" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                        </a>
+                        <a href="https://tiktok.com/@arifftalu" target="_blank">
+                            <img src="images.png" alt="TikTok">
+                        </a>
+                        <a href="https://instagram.com/mhdd_arif_" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="page">
+            <div class="about">
+                <h2>Tentang Saya</h2>
+                <p>Saya adalah seorang siswa di bidang Teknik komputer jaringan. Saya telah belajar di SMKN 1 RASAU JAYA proyek yang melibatkan pengembangan belajar wireless, membongkar PC, dan mempelajari hal-hal lainnya. Saya selalu berusaha untuk belajar hal baru dan terus meningkatkan keterampilan saya dalam bidang teknologi.</p>
+                <p>Di waktu luang, saya suka membaca buku, mendengarkan musik, dan berolahraga. Saya juga aktif di komunitas teknologi dan sering berpartisipasi dalam acara-acara teknologi lokal.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Copyright MUHAMMAD ARIF All Right Reserved</p>
+    </footer>
+</body>
+</html>
